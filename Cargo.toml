@@ -1,0 +1,24 @@
+[package]
+authors = ["FlapyPan <flapypan@gmail.com>"]
+name = "rutis"
+version = "0.1.0"
+edition = "2021"
+license = "MPL-2"
+readme = "README.md"
+repository = "https://github.com/FlapyPan/rutis"
+description = "使用 rust 和 tokio 库编写的极简 redis，包括服务端和客户端。"
+
+[[bin]]
+name = "rutis-server"
+path = "src/bin/server.rs"
+
+[[bin]]
+name = "rutis-cli"
+path = "src/bin/client.rs"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+log = { version = "0.4.20", features = [] }
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+bytes = "1.5"
